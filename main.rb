@@ -1,12 +1,18 @@
 require_relative 'app'
+require_relative 'modules/user_interface'
 
-def main
-  app = App.new
+class Main
+  include UserInterface
+  def initialize
+    @app = App.new
+  end
 
-  loop do
-    option = display_menu
-    handle_option(app, option)
+  def main
+    loop do
+      option = display_menu
+      handle_option(@app, option)
+    end
   end
 end
 
-main
+Main.new.main
