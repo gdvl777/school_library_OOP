@@ -1,11 +1,11 @@
-require_relative "book"
-require_relative "person"
-require_relative "student"
-require_relative "teacher"
-require_relative "rental"
-require_relative "classroom"
+require_relative 'book'
+require_relative 'person'
+require_relative 'student'
+require_relative 'teacher'
+require_relative 'rental'
+require_relative 'classroom'
 
-require_relative "modules/create_entities"
+require_relative 'modules/create_entities'
 
 class App
   attr_accessor :books, :people, :rentals
@@ -48,15 +48,15 @@ class App
   end
 
   def list_rentals_for_person
-    print "Enter person id: "
+    print 'Enter person id: '
     person_id = gets.chomp.to_i
 
     rentals = @rentals.select { |rental| rental.person.id == person_id }
 
     if rentals.empty?
-      puts "No rentals found for the given person id."
+      puts 'No rentals found for the given person id.'
     else
-      puts "Rentals:"
+      puts 'Rentals:'
       rentals.each do |rental|
         puts "Date: #{rental.date}, Book: #{rental.book.title} by #{rental.book.author}"
       end
@@ -64,7 +64,7 @@ class App
   end
 
   def exit_app
-    puts "Exiting the application. Goodbye!"
+    puts 'Exiting the application. Goodbye!'
     exit
   end
 end
