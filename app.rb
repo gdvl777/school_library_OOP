@@ -8,6 +8,8 @@ require_relative 'classroom'
 require_relative 'modules/create_entities'
 
 class App
+  include CreateEntities
+
   attr_accessor :books, :people, :rentals
 
   def initialize
@@ -17,24 +19,24 @@ class App
   end
 
   def create_person
-    person = CreateEntities.create_person
     # * First it will promp the user to choose between student or teacher
+    person = super # ! super = create_person from CreateEntities module.
     # * Then it will return the person instance.
     @people << person
   end
 
   def create_book
     # * First it will promp the user for the creation of a book.
+    book = super # ! super = create_book from CreateEntities module.
     # * Then it will return the book instance.
-    book = CreateEntities.create_book
     @books << book
   end
 
   def create_rental
-    rental = CreateEntities.create_rental(@books, @people)
     # * First it will promp the user for the creation of a rental, by
     # * iterating over the books and people arrays, and asking the user
     # * to choose one of each.
+    rental = super(@books, @people) # ! super = create_rental from CreateEntities module.
     # * Then it will return the rental instance.
     @rentals << rental
   end
