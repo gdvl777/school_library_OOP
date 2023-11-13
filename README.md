@@ -78,7 +78,6 @@ git clone https://github.com/gdvl777/school_library_OOP.git
 👤 **Daniel Villalba L**
 
 -   GitHub: [@githubhandle](https://github.com/gdvl777)
--   x: [X](https://www.x.com/gdvl777_/)
 -   Linkedin: [in](https://linkedin.com/in/dvillalba777)
 
 
@@ -87,7 +86,6 @@ git clone https://github.com/gdvl777/school_library_OOP.git
 👤 **Arthur Emanuel G. Iturres**
 
 -   GitHub: [@githubhandle](https://github.com/gdvl777)
--   x: [X](https://www.x.com/gdvl777_/)
 -   Linkedin: [in](https://www.linkedin.com/in/arturoemanuelguerraiturres/)
 
 ## 👥 Authors <a name="authors"></a>
@@ -95,7 +93,6 @@ git clone https://github.com/gdvl777/school_library_OOP.git
 👤 **Demes Ameneshoa**
 
 -   GitHub: [@githubhandle](https://github.com/demesameneshoa)
--   x: [X](https://twitter.com/demesabera)
 -   Linkedin: [in](https://linkedin.com/in/demes-ameneshoa/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
