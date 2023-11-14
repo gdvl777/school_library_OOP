@@ -20,6 +20,7 @@ class App
     @books = []
     @people = []
     @rentals = []
+    load_from_files
   end
 
   def create_person
