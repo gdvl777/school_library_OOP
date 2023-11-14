@@ -9,18 +9,22 @@ require_relative 'classroom'
 
 require_relative 'modules/create_entities'
 require_relative 'modules/list_entities'
+require_relative 'modules/rentals_data_manipulation'
+
+RENTALS_PATH = './db/rentals.json'.freeze
 
 class App
   include CreateEntities
   include ListEntities
+  include RentalsDataManipulation
+
   attr_accessor :books, :people, :rentals
 
   def initialize
     FileUtils.mkdir_p('./data')
     @books = []
     @people = []
-    @rentals = []
-    load_from_files
+    @rentals = load_rentals_from_json(RENTALS_PATH)
   end
 
   def create_person
@@ -43,7 +47,10 @@ class App
     # * to choose one of each.
     rental = super(@books, @people) # ! super = create_rental from CreateEntities module.
     # * Then it will return the rental instance.
-    @rentals << rental
+
+    @rentals << rental # * adds the rental to the rentals array which already has the rentals loaded from the json file.
+
+    save_rentals_to_json(RENTALS_PATH, rental)
   end
 
   def exit_app
@@ -54,8 +61,6 @@ class App
   def save_to_files
     File.write('./data/books.json', JSON.dump(@books.map(&:to_h)))
     File.write('./data/people.json', JSON.dump(@people.map(&:to_h)))
-    rental_data = @rentals.map(&:to_h)
-    File.write('./data/rentals.json', JSON.dump(rental_data))
   end
 
   def load_from_files
@@ -66,12 +71,6 @@ class App
       new_person.id = person['id']
       new_person
     end
-
-    @rentals = load_data('./data/rentals.json') do |rental|
-      book = @books.find { |b| b.title == rental['book_title'] }
-      person = @people.find { |p| p.id == rental['person_id'] }
-      Rental.new(rental['date'], book, person) if book && person
-    end.compact
   end
 
   def load_data(file_name, &block)
