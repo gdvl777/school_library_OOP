@@ -6,10 +6,11 @@ require_relative 'rental'
 require_relative 'classroom'
 
 require_relative 'modules/create_entities'
+require_relative 'modules/list_entities'
 
 class App
   include CreateEntities
-
+  include ListEntities
   attr_accessor :books, :people, :rentals
 
   def initialize
@@ -39,30 +40,6 @@ class App
     rental = super(@books, @people) # ! super = create_rental from CreateEntities module.
     # * Then it will return the rental instance.
     @rentals << rental
-  end
-
-  def list_books
-    @books.each { |book| puts "Title: #{book.title}, Author: #{book.author}" }
-  end
-
-  def list_people
-    @people.each { |person| puts "#{person.class}: Name: #{person.name}, Id: #{person.id}, Age: #{person.age}" }
-  end
-
-  def list_rentals_for_person
-    print 'Enter person id: '
-    person_id = gets.chomp.to_i
-
-    rentals = @rentals.select { |rental| rental.person.id == person_id }
-
-    if rentals.empty?
-      puts 'No rentals found for the given person id.'
-    else
-      puts 'Rentals:'
-      rentals.each do |rental|
-        puts "Date: #{rental.date}, Book: #{rental.book.title} by #{rental.book.author}"
-      end
-    end
   end
 
   def exit_app
