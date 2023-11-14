@@ -50,4 +50,34 @@ class App
     puts 'Exiting the application. Goodbye!'
     exit
   end
+  # Nuevas funciones agregadas para manejar JSON
+  def save_to_files
+    File.write('./data/books.json', JSON.dump(@books.map(&:to_h)))
+    File.write('./data/people.json', JSON.dump(@people.map(&:to_h)))
+    rental_data = @rentals.map(&:to_h)
+    File.write('./data/rentals.json', JSON.dump(rental_data))
+  end
+
+  def load_from_files
+    @books = load_data('./data/books.json') { |book| Book.new(book['title'], book['author']) }
+
+    @people = load_data('./data/people.json') do |person|
+      new_person = Person.new(person['name'], person['age'])
+      new_person.id = person['id']
+      new_person
+    end
+
+    @rentals = load_data('./data/rentals.json') do |rental|
+      book = @books.find { |b| b.title == rental['book_title'] }
+      person = @people.find { |p| p.id == rental['person_id'] }
+      Rental.new(rental['date'], book, person) if book && person
+    end.compact
+  end
+
+  def load_data(file_name, &block)
+    return [] unless File.exist?(file_name)
+
+    json_data = JSON.parse(File.read(file_name))
+    json_data.map(&block)
+  end
 end
