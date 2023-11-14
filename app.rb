@@ -69,19 +69,6 @@ class App
 
   def save_to_files
     File.write('./data/books.json', JSON.dump(@books.map(&:to_h)))
-    File.write('./data/people.json', JSON.dump(@people.map(&:to_h)))
-  end
-
-  def load_from_files
-    @books = load_data('./data/books.json') { |book| Book.new(book['title'], book['author']) }
-
-    @people = load_data('./data/people.json') do |person|
-      new_person = Person.new(person['name'], person['age'])
-
-      new_person.id = person['id']
-
-      new_person
-    end
   end
 
   def load_data(file_name, &block)
