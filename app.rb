@@ -57,6 +57,7 @@ class App
     puts 'Exiting the application. Goodbye!'
     exit
   end
+
   # Nuevas funciones agregadas para manejar JSON
   def save_to_files
     File.write('./data/books.json', JSON.dump(@books.map(&:to_h)))
