@@ -10,20 +10,22 @@ require_relative 'classroom'
 require_relative 'modules/create_entities'
 require_relative 'modules/list_entities'
 require_relative 'modules/rentals_data_manipulation'
+require_relative 'modules/people_data_manipulation'
 
 RENTALS_PATH = './db/rentals.json'.freeze
+PEOPLE_PATH = './db/people.json'.freeze
 
 class App
   include CreateEntities
   include ListEntities
   include RentalsDataManipulation
-
+  include PeopleDataManipulation
   attr_accessor :books, :people, :rentals
 
   def initialize
     FileUtils.mkdir_p('./data')
     @books = []
-    @people = []
+    @people = load_people_from_json(PEOPLE_PATH)
     @rentals = load_rentals_from_json(RENTALS_PATH)
   end
 
