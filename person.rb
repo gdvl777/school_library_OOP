@@ -7,12 +7,12 @@ require_relative 'rental'
 
 # Class representing a person
 class Person < Nameable
-  attr_accessor :name, :age, :rentals
-  attr_reader :id, :classroom
+  attr_accessor :id, :name, :age, :rentals
+  attr_reader :classroom
 
-  def initialize(name, age = 'Unknown', parent_permission: true)
+  def initialize(name = 'no-name-registered', age = 'Unknown', id = rand(1..1000), parent_permission: true)
     super()
-    @id = rand(1..1000)
+    @id = id
     @name = name
     @age = age
     @parent_permission = parent_permission
@@ -47,10 +47,3 @@ class Person < Nameable
     @age >= 18
   end
 end
-
-person = Person.new('maximilianus', 22)
-puts person.correct_name
-capitalized_person = CapitalizeDecorator.new(person)
-puts capitalized_person.correct_name
-capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
-puts capitalized_trimmed_person.correct_name
