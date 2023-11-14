@@ -53,7 +53,8 @@ The project is built using the following technologies:
 - **Basic UI**
 - **Refactor of code to fulfil SOLID Requirements**
 - **Refactor of code to fulfil YAGNI, DRY, KISS Requirements**
-- **Preserve data**
+- **Save data on Json**
+- **Retrieve data from Json**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
