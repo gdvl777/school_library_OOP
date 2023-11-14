@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2023-02-02",
+    "person": {
+      "id": 925,
+      "name": "Arthur-Iturres",
+      "age": 28
+    },
+    "book": {
+      "title": "JavaScript-The-Definitive-Guide",
+      "author": "David-Flanagan"
+    }
+  },
+  {
+    "date": "1990-02-10",
+    "person": {
+      "id": 562,
+      "name": "Harry-Potter",
+      "age": 30
+    },
+    "book": {
+      "title": "Advance-Potions",
+      "author": "Severus-Snape"
+    }
+  },
+  {
+    "date": "1870-02-01",
+    "person": {
+      "id": 365,
+      "name": "Albus-Dumbledore",
+      "age": 190
+    },
+    "book": {
+      "title": "Defense-Against-the-Dark-Arts",
+      "author": "Gilderoy-Lockhart"
+    }
+  },
+  {
+    "date": "1997-10-09",
+    "person": {
+      "id": 346,
+      "name": "Snape",
+      "age": 70
+    },
+    "book": {
+      "title": "dark-potions",
+      "author": "theprince"
+    }
+  }
+]
