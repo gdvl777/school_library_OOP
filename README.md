@@ -48,7 +48,11 @@ The project is built using the following technologies:
 - **Classes**
 - **Rubocop install**
 - **Gems install**
-
+- **"Decorator" design pattern**
+- **Associations**
+- **Basic UI**
+- **Refactor of code to fulfil SOLID Requirements**
+- **Refactor of code to fulfil YAGNI, DRY, KISS Requirements**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,8 +78,22 @@ git clone https://github.com/gdvl777/school_library_OOP.git
 👤 **Daniel Villalba L**
 
 -   GitHub: [@githubhandle](https://github.com/gdvl777)
--   x: [X](https://www.x.com/gdvl777_/)
+-   Linkedin: [in](https://linkedin.com/in/dvillalba777)
 
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Arthur Emanuel G. Iturres**
+
+-   GitHub: [@githubhandle](https://github.com/gdvl777)
+-   Linkedin: [in](https://www.linkedin.com/in/arturoemanuelguerraiturres/)
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Demes Ameneshoa**
+
+-   GitHub: [@githubhandle](https://github.com/demesameneshoa)
+-   Linkedin: [in](https://linkedin.com/in/demes-ameneshoa/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,10 +101,6 @@ git clone https://github.com/gdvl777/school_library_OOP.git
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **"Decorator" design pattern**
-- [ ] **Associations**
-- [ ] **Basic UI**
-- [ ] **Refactor of code**
 - [ ] **Preserve data**
 - [ ] **Unit tests**
 
