@@ -1,3 +1,5 @@
+require 'json'
+require 'fileutils'
 require_relative 'book'
 require_relative 'person'
 require_relative 'student'
@@ -14,6 +16,7 @@ class App
   attr_accessor :books, :people, :rentals
 
   def initialize
+    FileUtils.mkdir_p('./data')
     @books = []
     @people = []
     @rentals = []
