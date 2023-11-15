@@ -53,4 +53,26 @@ describe Rental do
       expect(@rental.person).to eq(expected_person_object)
     end
   end
+  context '#to_h' do
+    before(:each) do
+      @date = '2021-01-01'
+
+      @book = Book.new('Harry Potter', 'J.K. Rowling')
+
+      # * Teacher inherits from Person, the same applies to Student.
+      # * so person in the Rental class can be either a Student or a Teacher.
+      # * Person itself is never instantiated in the program.
+      @person = Teacher.new('Severus Snape', 50, 'Potions')
+
+      @rental = Rental.new(@date, @book, @person)
+    end
+    it 'returns a hash representation of the rental' do
+      expected_hash = {
+        date: @date,
+        book_title: @book.title,
+        person_id: @person.id
+      }
+      expect(@rental.to_h).to eq(expected_hash)
+    end
+  end
 end
