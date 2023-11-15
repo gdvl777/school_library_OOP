@@ -99,7 +99,7 @@ rspec
 
 👤 **Daniel Villalba L**
 
--   GitHub: [@githubhandle](https://github.com/gdvl777)
+-   GitHub: [@gdvl777](https://github.com/gdvl777)
 -   Linkedin: [in](https://linkedin.com/in/dvillalba777)
 
 
