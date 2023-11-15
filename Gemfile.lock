@@ -1,5 +1,4 @@
 GEM
-  remote: https://rubygems.org/
   specs:
     ast (2.4.2)
     base64 (0.1.1)
@@ -23,10 +22,10 @@ GEM
     rspec-expectations (3.12.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
-    rspec-mocks (3.12.6)
+    rspec-mocks (3.12.5)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
-    rspec-support (3.12.1)
+    rspec-support (3.12.0)
     rubocop (1.56.1)
       base64 (~> 0.1.1)
       json (~> 2.3)
@@ -45,13 +44,12 @@ GEM
     unicode-display_width (2.4.2)
 
 PLATFORMS
-  x64-mingw-ucrt
+  x64-unknown
   x86_64-darwin-22
-  x86_64-linux
 
 DEPENDENCIES
   rspec (~> 3.0)
   rubocop (>= 1.0, < 2.0)
 
 BUNDLED WITH
-   2.2.3
+   2.4.19
