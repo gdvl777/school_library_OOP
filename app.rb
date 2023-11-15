@@ -25,7 +25,7 @@ class App
   attr_accessor :books, :people, :rentals
 
   def initialize
-    @books = []
+    @books = load_books_from_json(BOOKS_PATH)
     @people = load_people_from_json(PEOPLE_PATH)
     @rentals = load_rentals_from_json(RENTALS_PATH)
   end
