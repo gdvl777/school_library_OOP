@@ -11,9 +11,11 @@ require_relative 'modules/create_entities'
 require_relative 'modules/list_entities'
 require_relative 'modules/rentals_data_manipulation'
 require_relative 'modules/people_data_manipulation'
+require_relative 'modules/books_data_manipulation'
 
 RENTALS_PATH = './db/rentals.json'.freeze
 PEOPLE_PATH = './db/people.json'.freeze
+BOOKS_PATH = './db/books.json'.freeze
 
 class App
   include CreateEntities
@@ -24,7 +26,7 @@ class App
   attr_accessor :books, :people, :rentals
 
   def initialize
-    FileUtils.mkdir_p('./data')
+    FileUtils.mkdir_p('./db')
 
     @books = []
     @people = load_people_from_json(PEOPLE_PATH)
@@ -47,6 +49,8 @@ class App
     # * Then it will return the book instance.
 
     @books << book
+
+    save_rentals_to_json(BOOKS_PATH, book)
   end
 
   def create_rental
@@ -68,7 +72,7 @@ class App
   end
 
   def save_to_files
-    File.write('./data/books.json', JSON.dump(@books.map(&:to_h)))
+    File.write('./db/books.json', JSON.dump(@books.map(&:to_h)))
   end
 
   def load_data(file_name, &block)
