@@ -12,4 +12,11 @@ class Classroom
     @students << student
     student.classroom = self
   end
+
+  def to_h
+    {
+      'label' => @label,
+      'students' => @students.map(&:id) # Esto llamará al id en cada estudiante en el arreglo
+    }
+  end
 end

@@ -53,6 +53,8 @@ The project is built using the following technologies:
 - **Basic UI**
 - **Refactor of code to fulfil SOLID Requirements**
 - **Refactor of code to fulfil YAGNI, DRY, KISS Requirements**
+- **Save data on Json**
+- **Retrieve data from Json**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,7 +103,6 @@ git clone https://github.com/gdvl777/school_library_OOP.git
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Preserve data**
 - [ ] **Unit tests**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -6,4 +6,14 @@ class Teacher < Person
     super(name, age, parent_permission: parent_permission)
     @specialization = specialization
   end
+
+  def to_h
+    super.merge({
+                  'specialization' => @specialization
+                })
+  end
+
+  def can_use_services?
+    true
+  end
 end
