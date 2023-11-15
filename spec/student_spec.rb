@@ -32,17 +32,17 @@ describe Student do
     end
   end
   describe '#to_h' do
-  it 'returns a hash representation of the student' do
-    student = Student.new(student_name, student_age, classroom)
+    it 'returns a hash representation of the student' do
+      student = Student.new(student_name, student_age, classroom)
 
-    expected_hash = {
-      'name' => student_name,
-      'age' => student_age,
-      'parent_permission' => true,
-      :classroom => classroom&.label, # Use safe navigation to avoid nil errors
-      'id' => student.id # This is the id of the student, not the classroom id
-    }
-    expect(student.to_h).to eq(expected_hash)
-  end
+      expected_hash = {
+        'name' => student_name,
+        'age' => student_age,
+        'parent_permission' => true,
+        :classroom => classroom&.label, # Use safe navigation to avoid nil errors
+        'id' => student.id # This is the id of the student, not the classroom id
+      }
+      expect(student.to_h).to eq(expected_hash)
+    end
   end
 end
