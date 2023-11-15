@@ -1,7 +1,7 @@
 require 'json'
 
 module BooksDataManipulation
-  def save_books_to_json(file_path, new_person)
+  def save_books_to_json(file_path, new_book)
     parsed_data = []
 
     # * Read existing JSON data from the file if it exists.
