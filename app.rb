@@ -22,6 +22,7 @@ class App
   include ListEntities
   include RentalsDataManipulation
   include PeopleDataManipulation
+  include BooksDataManipulation
 
   attr_accessor :books, :people, :rentals
 
@@ -50,7 +51,7 @@ class App
 
     @books << book
 
-    save_rentals_to_json(BOOKS_PATH, book)
+    save_books_to_json(BOOKS_PATH, book)
   end
 
   def create_rental
