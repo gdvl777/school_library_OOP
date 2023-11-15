@@ -55,6 +55,10 @@ The project is built using the following technologies:
 - **Refactor of code to fulfil YAGNI, DRY, KISS Requirements**
 - **Save data on Json**
 - **Retrieve data from Json**
+- **Add rspec tests**
+- **Create rspec tests for Book, Student, Teacher, Rental, Classroom, Person classes**
+- **Create rspec tests for all methods in the classes**
+- **Create rspec tests for decorator class**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +107,7 @@ git clone https://github.com/gdvl777/school_library_OOP.git
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Unit tests**
+- [ ] **Improve User Interface**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
