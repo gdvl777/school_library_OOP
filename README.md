@@ -10,6 +10,7 @@
     - [Key Features ](#key-features-)
   - [💻 Getting Started ](#-getting-started-)
   - [Setup](#setup)
+  - [Tests](#tests)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -55,6 +56,10 @@ The project is built using the following technologies:
 - **Refactor of code to fulfil YAGNI, DRY, KISS Requirements**
 - **Save data on Json**
 - **Retrieve data from Json**
+- **Add rspec tests**
+- **Create rspec tests for Book, Student, Teacher, Rental, Classroom, Person classes**
+- **Create rspec tests for all methods in the classes**
+- **Create rspec tests for decorator class**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,12 +79,27 @@ git clone https://github.com/gdvl777/school_library_OOP.git
 
 ```
 
+## Tests
+
+To test this project with rspec.
+
+1. Install dependencies :
+
+```
+bundle install
+```
+2. Run rspec tests :
+
+```
+rspec
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Daniel Villalba L**
 
--   GitHub: [@githubhandle](https://github.com/gdvl777)
+-   GitHub: [@gdvl777](https://github.com/gdvl777)
 -   Linkedin: [in](https://linkedin.com/in/dvillalba777)
 
 
@@ -103,7 +123,7 @@ git clone https://github.com/gdvl777/school_library_OOP.git
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Unit tests**
+- [ ] **Improve User Interface**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

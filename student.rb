@@ -16,7 +16,7 @@ class Student < Person
 
   def to_h
     super.merge({
-                  classroom: @classroom.label # Cambiado para evitar la recursividad
+                  classroom: @classroom&.label # Cambiado para evitar la recursividad
                 })
   end
 end
