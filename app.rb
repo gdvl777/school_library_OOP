@@ -1,5 +1,3 @@
-require 'json'
-require 'fileutils'
 require_relative 'book'
 require_relative 'person'
 require_relative 'student'
@@ -27,8 +25,6 @@ class App
   attr_accessor :books, :people, :rentals
 
   def initialize
-    FileUtils.mkdir_p('./db')
-
     @books = []
     @people = load_people_from_json(PEOPLE_PATH)
     @rentals = load_rentals_from_json(RENTALS_PATH)
@@ -70,17 +66,5 @@ class App
     puts 'Exiting the application. Goodbye!'
 
     exit
-  end
-
-  def save_to_files
-    File.write('./db/books.json', JSON.dump(@books.map(&:to_h)))
-  end
-
-  def load_data(file_name, &block)
-    return [] unless File.exist?(file_name)
-
-    json_data = JSON.parse(File.read(file_name))
-
-    json_data.map(&block)
   end
 end
