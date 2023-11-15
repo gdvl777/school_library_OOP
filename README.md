@@ -10,6 +10,7 @@
     - [Key Features ](#key-features-)
   - [💻 Getting Started ](#-getting-started-)
   - [Setup](#setup)
+  - [Tests](#tests)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -78,6 +79,21 @@ git clone https://github.com/gdvl777/school_library_OOP.git
 
 ```
 
+## Tests
+
+To test this project with rspec.
+
+1. Install dependencies :
+
+```
+bundle install
+```
+2. Run rspec tests :
+
+```
+rspec
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
 
